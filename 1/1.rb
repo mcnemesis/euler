@@ -15,5 +15,9 @@ def gcd(u,v)
   u
 end
 
-limit,u,v = 1e36,3,5
-print (z(u,limit-1) + z(v,limit-1) - z((u*v).abs/gcd(u,v),limit-1))
+def lcm(u,v)
+    (u*v).abs/gcd(u,v)
+end
+
+limit,u,v = 1e3.to_i,3,5
+print (z(u,limit-1) + z(v,limit-1) - z(lcm(u,v),limit-1))

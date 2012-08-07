@@ -25,6 +25,10 @@ def lcm(u,v)
     (u*v).abs/gcd(u,v)
 end
     
-limit = 1000
+limit,u,v = 1e3.to_i,3,5
 #Solution to our problem becomes...
-p
+#1 - find sums of all factors of 3 and 5 within limit
+#2 - sum them
+#3 - subtract the sum of all the factors of their lcm (lcm of 3&5 -> 15), within the limit
+#reason for 3 : these values will otherwise be included twice in sum 2
+print (z(u,limit-1) + z(v,limit-1) - z(lcm(u,v),limit-1))
