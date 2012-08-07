@@ -1,7 +1,7 @@
 euler
 =====
 
-My Attempts at Acing Project Euler.
+My Attempts at mastering Project Euler.
 
 plan?
 =====
