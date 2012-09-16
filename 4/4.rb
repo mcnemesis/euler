@@ -24,10 +24,15 @@ n = 3
 low_limit = smallest_n_digit_number(n)
 upper_limit = largest_n_digit_number(n)
 
-i = low_limit
+#the highest product can't be obtained from the lower half of the sequence
+#thus follows, the greatest palindrome can't too
+#This allows us to instead solve a smaller problem then...
+adjusted_low_limit = low_limit + ((upper_limit - low_limit) / 2).ceil
+
+i = adjusted_low_limit
 while i <= upper_limit
     j = upper_limit
-    while j >= low_limit
+    while j >= adjusted_low_limit
         p = i * j
         #palindrome property
         if p.to_s == p.to_s.reverse
