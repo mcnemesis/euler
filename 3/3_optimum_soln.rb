@@ -39,3 +39,4 @@ n = 600851475143
 #NOTE:Takes advantage of the fact that the biggest prime factor of n
 #can't exceed the square-root of n
 p only_factors(n,all_primes(Math.sqrt(n).ceil)).max
+
